@@ -32,10 +32,6 @@ node {
                 build job: 'updatemanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
         }
 
-    post { 
-        always { 
-            echo 'I will always say Hello again!'
-        }
-    }
+
 
 }
