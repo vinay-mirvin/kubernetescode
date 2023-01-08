@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("vinaay/argocd")
+       app = docker.build("vinaay/test")
     }
 
     stage('Test image') {
