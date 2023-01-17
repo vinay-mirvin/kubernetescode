@@ -31,6 +31,12 @@ node {
                 echo "triggering updatemanifestjob"
                 build job: 'updatemanifest', parameters: [string(name: 'DOCKERTAG', value: env.BUILD_NUMBER)]
         }
+    
+     script {
+                docker.withRegistry('https://gcr.io', 'gcr:gcp_demo') {
+                    dockerImage.push()
+                }
+            }
 
 
 
