@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("ornate-unity-358911/test-0")
+       app = docker.build("ornate-unity-358911/test-0/vinay")
     }
 
     stage('Test image') {
