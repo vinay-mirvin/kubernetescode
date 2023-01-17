@@ -34,7 +34,7 @@ node {
     
      script {
                 docker.withRegistry('https://gcr.io', 'gcr:gcp_demo') {
-                    dockerImage.push()
+                    app.push()
                 }
             }
 
