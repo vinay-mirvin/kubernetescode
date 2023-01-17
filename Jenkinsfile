@@ -9,7 +9,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("vinaay/test")
+       app = docker.build("test-0/test")
     }
 
     stage('Test image') {
@@ -20,12 +20,12 @@ node {
 //         }
     }
 
-    stage('Push image') {
+//     stage('Push image') {
         
-        docker.withRegistry('https://registry.hub.docker.com', 'Docker') {
-            app.push("${env.BUILD_NUMBER}")
-        }
-    }
+//         docker.withRegistry('https://registry.hub.docker.com', 'Docker') {
+//             app.push("${env.BUILD_NUMBER}")
+//         }
+//     }
     
     stage('Trigger ManifestUpdate') {
                 echo "triggering updatemanifestjob"
