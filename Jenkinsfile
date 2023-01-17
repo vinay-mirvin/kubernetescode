@@ -34,7 +34,7 @@ node {
     
      script {
                 docker.withRegistry('https://gcr.io', 'gcr:gcp_demo') {
-                    app.push()
+                    app.push("${env.BUILD_NUMBER}")
                 }
             }
 
