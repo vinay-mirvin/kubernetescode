@@ -12,11 +12,9 @@ node {
 
         
      script {
-                docker.withRegistry('https://gcr.io', 'gcr:gcp_demo') {
+                docker.withRegistry('https://asia-south1-docker.pkg.dev/', 'gcr:gcp_demo') {
                     app.push("${env.BUILD_NUMBER}")
                 }
             }
-
-
 
 }
