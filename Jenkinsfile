@@ -1,13 +1,22 @@
 node {
   def app
 
-  stage('Clone repository') {
-    checkout scmGit(branches: [
-      [name: '*/gcp']
-    ], extensions: [], userRemoteConfigs: [
-      [credentialsId: 'github', url: 'https://github.com/vinay-mirvin/kubernetescode.git']
-    ])
-  }
+//   stage('Clone repository') {
+//     checkout scmGit(branches: [
+//       [name: '*/gcp']
+//     ], extensions: [], userRemoteConfigs: [
+//       [credentialsId: 'github', url: 'https://github.com/vinay-mirvin/kubernetescode.git']
+//     ])
+//   }
+
+
+
+    stage('Clone repository') {
+      
+
+        checkout scm
+    }
+
 
   stage('Build image') {
 
