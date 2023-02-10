@@ -13,7 +13,7 @@ node {
 
     script {
       withDockerRegistry(credentialsId: 'gcr:ornate-unity-358911', url: 'https://asia-south1-docker.pkg.dev') {
-        app = docker.build("asia-south1-docker.pkg.dev/ornate-unity-358911/test-0/flask-app:$BUILD_NUMBER")
+        app = docker.build("asia-south1-docker.pkg.dev/ornate-unity-358911/test-0/flask1:$BUILD_NUMBER")
         app.push()
       }
     }
