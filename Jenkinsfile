@@ -21,7 +21,7 @@ node {
   stage('Build image') {
 
     script {
-      withDockerRegistry(credentialsId: 'gcr:ornate-unity-358911', url: 'https://asia-south1-docker.pkg.dev') {
+      withDockerRegistry(credentialsId: 'gcr: ornate-unity-358911', url: 'https://asia-south1-docker.pkg.dev') {
         app = docker.build("asia-south1-docker.pkg.dev/ornate-unity-358911/test-0/flask1:$BUILD_NUMBER")
         app.push()
       }
@@ -47,5 +47,3 @@ node {
 }
 
 
-    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:us-east-1:924148612171:certificate/4bbf71cd-4910-4e5c-b97e-88d63aa925b6
-    service.beta.kubernetes.io/aws-load-balancer-ssl-ports: https
